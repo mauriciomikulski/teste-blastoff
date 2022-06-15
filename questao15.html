@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 0px;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .main {
+      grid-area: main;
+    }
+
+    .menu {
+      grid-area: menu;
+    }
+
+    .right {
+      grid-area: right;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+
+    .grid-template-areas-1 {
+      grid-template-areas:
+        "header header header header"
+        "menu main main right"
+        "menu footer footer footer"
+      ;
+    }
+
+    /* Grid Item */
+    .item {
+      margin: 2px;
+      background: #bce3f5;
+      text-align: center;
+      font-size: 1.5em;
+      border: 2px solid cornflowerblue;
+    }
+
+    .grid {
+      max-width: 823px;
+      margin: 0 auto;
+      background-color: rgb(94, 148, 247);
+    }
+
+    body {
+      font-family: monospace;
+      color: #333;
+      padding-bottom: 30px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="grid grid-template-areas-1">
+    <div class="item header">Header</div>
+    <div class="item main">Main</div>
+    <div class="item menu">Menu</div>
+    <div class="item right">Right</div>
+    <div class="item footer">Footer</div>
+  </section>
+</body>
+
+</html>
